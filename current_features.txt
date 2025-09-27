@@ -1,0 +1,8 @@
+CURRENTLY IMPLEMENTED FEATURES
+
+- Vocal Conversation
+- Screenshots and analysis
+- Clipboard extraction
+- Webcam capture
+- Live weather based on location
+- Enhanced voice with eleven labs
