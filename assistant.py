@@ -15,6 +15,8 @@ import sys
 import threading
 import speech_recognition as sr
 import date_utils
+import os
+from dotenv import load_dotenv
 from functools import wraps
 from datetime import datetime, timedelta
 from typing import Dict, Any, Optional, Callable
@@ -33,6 +35,15 @@ from memory import remember_interaction, get_relevant_memories
 from advanced_nlu import process_nlu
 from dialogue_manager import DialogueManager, DialogueState
 from system_control import system_controller
+
+load_dotenv()
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+def ensure_env():
+    load_dotenv()
+    if not os.getenv("OPENAI_API_KEY"):
+        raise RuntimeError("OPENAI_API_KEY not set! Create a .env (see .env.example).")
 
 os.environ['TEST_MODE'] = 'true'
 
