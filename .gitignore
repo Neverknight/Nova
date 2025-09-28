@@ -1,6 +1,27 @@
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg-info/
 .venv/
+
+# Local config & secrets
 .env
+.env.*
+apikeys.txt
+*.key
+*.pem
+*.p12
+*.json    # beware service-account keys
 *.db
+*.sqlite*
+
+# Logs, caches, artifacts
 *.log
+logs/
+backups/
+
+# Media/binaries you don’t need in git
+*.wav
+*.mp3
+*.mp4
+*.zip
